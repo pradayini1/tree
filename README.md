@@ -25,3 +25,23 @@ case $INPUT_STRING in
                 echo "Not a valid argument"
                 echo
 esac
+
+
+27
+
+#!/bin/bash
+ echo "please give the name of the log file to be fallowed"
+read a
+tail -f $a
+
+
+
+29
+
+#!/bin/bash
+echo "give the name of the filesystem"
+read a
+echo "checking if the file system is mounted or not"
+findmnt $a
+echo "free space in the mounted filesystem"
+findmnt --df
